@@ -10,7 +10,7 @@ Also, I have found this method to be very reliable/predictable and easy to maint
 Use this on one of your replicas in a mongo replica set.
 
 It backs up the mongo files daily (pick a slow time of day is best!)
-It zips the backup
+It zips the backup (mongodb files are by default highly compressable because they are stored uncompressed (with full field names) in the file system!) -- thanks to file mapping architecture.
 It copies and keeps 3 most recent daily backups, and deletes older daily backups.
 And once a week it stores the end-of-week daily  backup for long term storage and does not delete.
 
