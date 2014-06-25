@@ -23,7 +23,7 @@ Configure the shared folder (nas) where to store the backups.
 5. Keep 3 daily backups
 6. Restarts mongo
 
-Mongo will automatically resync and catch up to the master. 
+Mongo will automatically resync and catch up to the master (er, primary), which is usually pretty quick dependening on your data insert rate. I've found that it can catch up an hour of data in less than a minute, with several :wq
 Typically this is run with a > 3 node replica set.
 
 
