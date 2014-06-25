@@ -1,8 +1,11 @@
 mongo_backup_script
 ===================
 
-a mongo backup script
+A mongo backup script
 
+This backup script is for a simple backup of MongoDB. It backs up the files directly, and does not use mongodump.
+The advantage of using the files directly is that you can use them to restore a node or when starting a new node in a replica set.
+Also, I have found this method to be very reliable/predictable and easy to maintain.
 
 Use this on one of your replicas in a mongo replica set.
 
